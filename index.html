@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JordaneElectronique, équipements agricoles, industriels et électriques."
+    />
+    <title>JordaneElectronique | Site vitrine</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- EN-TÊTE -->
+    <header class="header">
+      <a href="#accueil" class="logo">
+        <img src="images/logo.png" alt="Logo JordaneElectronique" />
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav id="navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#categories">Catégories</a>
+        <a href="#produits">Produits</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact" class="btn btn-rouge">Nous contacter</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ACCUEIL -->
+      <section class="hero" id="accueil">
+        <div class="hero-content">
+          <span class="surtitre">VOTRE PARTENAIRE EN ÉQUIPEMENTS</span>
+
+          <h1>Des équipements fiables pour <span>vos travaux</span></h1>
+
+          <p>
+            Découvrez nos équipements agricoles, industriels et électriques pour
+            accompagner vos projets.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#produits" class="btn btn-rouge">
+              Voir les produits
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#contact" class="btn btn-transparent"> Nous contacter </a>
+          </div>
+
+          <form id="search-form" class="search-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Rechercher un équipement..."
+              aria-label="Rechercher un équipement"
+            />
+            <button type="submit">Rechercher</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- CATÉGORIES -->
+      <section class="categories section" id="categories">
+        <div class="section-heading">
+          <span class="surtitre sombre">NOS DOMAINES</span>
+          <h2>Nos <span>catégories</span></h2>
+          <p>
+            Des solutions pour vos besoins agricoles, industriels et
+            électriques.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="categorie-card">
+              <img
+                src="images/motoculteur1.png"
+                alt="Équipement agricole : motoculteur"
+                class="categorie-image"
+                loading="lazy"
+              />
+            </div>
+
+            <h3>Équipements agricoles</h3>
+            <p>
+              Motoculteurs, motopompes, débroussailleuses et autres équipements.
+            </p>
+
+            <a href="#produits">
+              Découvrir <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="category-card">
+            <div class="categorie-card">
+              <img
+                src="images/monte charge complet 500kg_1.png"
+                alt="Équipement industriel : monte-charge"
+                class="categorie-image"
+                loading="lazy"
+              />
+            </div>
+
+            <h3>Matériel industriel</h3>
+            <p>
+              Du matériel pour les ateliers, les chantiers et les activités
+              professionnelles.
+            </p>
+
+            <a href="#produits">
+              Découvrir <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="category-card">
+            <div class="categorie-card">
+              <img
+                src="images/groupe electrogene2.png"
+                alt="Équipement électrique : groupe électrogène"
+                class="categorie-image"
+                loading="lazy"
+              />
+            </div>
+
+            <h3>Matériel électrique</h3>
+            <p>
+              Des équipements pour vos installations et vos besoins techniques.
+            </p>
+
+            <a href="#produits">
+              Découvrir <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRODUITS -->
+      <section class="products section" id="produits">
+        <div class="section-heading">
+          <span class="surtitre sombre">NOTRE SÉLECTION</span>
+          <h2>Nos <span>produits</span></h2>
+          <p>
+            Découvrez quelques équipements présentés par JordaneElectronique.
+          </p>
+        </div>
+
+        <div class="filters">
+          <button type="button" class="filter active" data-filter="tous">
+            Tous
+          </button>
+          <button type="button" class="filter" data-filter="agricole">
+            Agricole
+          </button>
+          <button type="button" class="filter" data-filter="industriel">
+            Industriel
+          </button>
+          <button type="button" class="filter" data-filter="electrique">
+            Électrique
+          </button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+          <!-- MOTOCULTEUR -->
+          <article
+            class="product-card"
+            data-category="agricole"
+            data-name="motoculteur motoculteurs agricole"
+          >
+            <div class="product-image">
+              <img
+                src="images/motoculteur1.png"
+                alt="Motoculteur"
+                loading="lazy"
+                onerror="
+                  this.hidden = true;
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="placeholder" hidden>
+                <i class="fa-solid fa-tractor"></i>
+              </div>
+              <span class="tag">Agricole</span>
+            </div>
+
+            <div class="product-info">
+              <small>ÉQUIPEMENT AGRICOLE</small>
+              <h3>Motoculteur</h3>
+              <p>
+                Un équipement pour accompagner vos travaux de préparation du
+                sol.
+              </p>
+              <a
+                href="#contact"
+                class="product-link"
+                data-product="Motoculteur"
+              >
+                Demander des informations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- MOTOPOMPE -->
+          <article
+            class="product-card"
+            data-category="agricole"
+            data-name="motopompe pompe agricole eau"
+          >
+            <div class="product-image product-bg-yellow">
+              <img
+                src="images/motopompe diesel 1.png"
+                alt="Motopompe"
+                loading="lazy"
+                onerror="
+                  this.hidden = true;
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="placeholder" hidden>
+                <i class="fa-solid fa-water"></i>
+              </div>
+              <span class="tag">Agricole</span>
+            </div>
+
+            <div class="product-info">
+              <small>ÉQUIPEMENT AGRICOLE</small>
+              <h3>Motopompe</h3>
+              <p>
+                Une solution à choisir selon vos besoins de pompage et
+                d'irrigation.
+              </p>
+              <a href="#contact" class="product-link" data-product="Motopompe">
+                Demander des informations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- GROUPE ÉLECTROGÈNE -->
+          <article
+            class="product-card"
+            data-category="industriel"
+            data-name="groupe électrogène générateur industriel énergie"
+          >
+            <div class="product-image product-bg-blue">
+              <img
+                src="images/groupe electrogene1.png"
+                alt="Groupe électrogène"
+                loading="lazy"
+                onerror="
+                  this.hidden = true;
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="placeholder" hidden>
+                <i class="fa-solid fa-gears"></i>
+              </div>
+              <span class="tag">Industriel</span>
+            </div>
+
+            <div class="product-info">
+              <small>ÉQUIPEMENT INDUSTRIEL</small>
+              <h3>Groupe électrogène</h3>
+              <p>Des solutions pour vos besoins d'alimentation électrique.</p>
+              <a
+                href="#contact"
+                class="product-link"
+                data-product="Groupe électrogène"
+              >
+                Demander des informations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- DÉBROUSSAILLEUSE -->
+          <article
+            class="product-card"
+            data-category="agricole"
+            data-name="débroussailleuse débroussaillage jardin agricole"
+          >
+            <div class="product-image product-bg-green">
+              <img
+                src="images/debroussailleuse 1.png"
+                alt="Débroussailleuse"
+                loading="lazy"
+                onerror="
+                  this.hidden = true;
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="placeholder" hidden>
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <span class="tag">Agricole</span>
+            </div>
+
+            <div class="product-info">
+              <small>ÉQUIPEMENT AGRICOLE</small>
+              <h3>Débroussailleuse</h3>
+              <p>Un équipement pour l'entretien des espaces et des terrains.</p>
+              <a
+                href="#contact"
+                class="product-link"
+                data-product="Débroussailleuse"
+              >
+                Demander des informations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- MATÉRIEL ÉLECTRIQUE -->
+          <article
+            class="product-card"
+            data-category="electrique"
+            data-name="câble électrique matériel installation"
+          >
+            <div class="product-image product-bg-red">
+              <img
+                src="images/materiel-electrique.jpg"
+                alt="Matériel électrique"
+                loading="lazy"
+                onerror="
+                  this.hidden = true;
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="placeholder" hidden>
+                <i class="fa-solid fa-plug"></i>
+              </div>
+              <span class="tag">Électrique</span>
+            </div>
+
+            <div class="product-info">
+              <small>MATÉRIEL ÉLECTRIQUE</small>
+              <h3>Équipements électriques</h3>
+              <p>
+                Du matériel à sélectionner selon les exigences de votre
+                installation.
+              </p>
+              <a
+                href="#contact"
+                class="product-link"
+                data-product="Matériel électrique"
+              >
+                Demander des informations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- AUTRES ÉQUIPEMENTS -->
+          <article
+            class="product-card"
+            data-category="agricole"
+            data-name="atomiseur tarière équipement agricole"
+          >
+            <div class="product-image product-bg-dark">
+              <img
+                src="images/autres-equipements.jpg"
+                alt="Autres équipements agricoles"
+                loading="lazy"
+                onerror="
+                  this.hidden = true;
+                  this.nextElementSibling.hidden = false;
+                "
+              />
+              <div class="placeholder" hidden>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <span class="tag">Agricole</span>
+            </div>
+
+            <div class="product-info">
+              <small>OUTILLAGE AGRICOLE</small>
+              <h3>Autres équipements</h3>
+              <p>
+                Contactez-nous pour connaître les références correspondant à
+                votre projet.
+              </p>
+              <a
+                href="#contact"
+                class="product-link"
+                data-product="Autres équipements"
+              >
+                Demander des informations
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p id="no-results" class="no-results" hidden>
+          Aucun produit ne correspond à votre recherche.
+        </p>
+
+        <p class="product-note">
+          Les photos, références, prix et disponibilités doivent être confirmés
+          auprès de l'entreprise.
+        </p>
+      </section>
+
+      <!-- APPEL À L'ACTION -->
+      <section class="callout">
+        <div>
+          <span class="surtitre">UN PROJET À RÉALISER ?</span>
+          <h2>Parlons de vos besoins en équipements.</h2>
+          <p>
+            Contactez-nous pour obtenir des informations ou demander un devis.
+          </p>
+        </div>
+
+        <a href="#contact" class="btn btn-clair">
+          Demander un devis
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </section>
+
+      <!-- À PROPOS : IMAGE RÉELLE À LA PLACE DE L'ICÔNE -->
+      <section class="about section" id="apropos">
+        <div class="about-visual">
+          <img
+            src="images/motoculteur1.png"
+            alt="Équipements et activité de JordaneElectronique"
+            class="about-photo"
+            loading="lazy"
+          />
+
+          <div class="about-badge">
+            <i class="fa-solid fa-bolt"></i>
+            Des solutions pour vos projets
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="surtitre sombre">QUI SOMMES-NOUS ?</span>
+
+          <h2>À propos de <span>JordaneElectronique</span></h2>
+
+          <p class="lead">
+            Votre partenaire pour identifier les équipements adaptés à vos
+            activités.
+          </p>
+
+          <p>
+            JordaneElectronique présente des équipements agricoles, industriels
+            et électriques. Nous souhaitons vous aider à trouver les solutions
+            adaptées à vos projets grâce à un contact direct et à des conseils
+            personnalisés.
+          </p>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Écoute de vos besoins
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Informations sur les équipements
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Accompagnement dans votre choix
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn-rouge">Contactez-nous</a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact section" id="contact">
+        <div class="section-heading">
+          <span class="surtitre sombre">CONTACT</span>
+          <h2>Parlons de votre <span>projet</span></h2>
+          <p>Remplissez le formulaire pour préparer un message WhatsApp.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <h3>Nos coordonnées</h3>
+            <p>
+              Remplacez les informations d'exemple par vos coordonnées réelles.
+            </p>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <small>Téléphone</small>
+                <strong>+237 6XX XX XX XX</strong>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <small>WhatsApp</small>
+                <strong>Contact direct</strong>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-regular fa-envelope"></i>
+              <div>
+                <small>E-mail</small>
+                <strong>Votre adresse e-mail</strong>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <small>Zone desservie</small>
+                <strong>À préciser par l'entreprise</strong>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <label for="nom">Nom complet</label>
+            <input
+              id="nom"
+              type="text"
+              placeholder="Votre nom"
+              autocomplete="name"
+              required
+            />
+
+            <label for="telephone">Téléphone</label>
+            <input
+              id="telephone"
+              type="tel"
+              placeholder="Votre numéro"
+              autocomplete="tel"
+              required
+            />
+
+            <label for="objet">Votre demande</label>
+            <select id="objet" required>
+              <option value="">Choisissez un sujet</option>
+              <option>Équipement agricole</option>
+              <option>Équipement industriel</option>
+              <option>Matériel électrique</option>
+              <option>Demande de devis</option>
+              <option>Autre demande</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Décrivez votre besoin..."
+              required
+            ></textarea>
+
+            <button class="btn btn-rouge" type="submit">
+              Envoyer via WhatsApp
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+
+            <small>
+              Le formulaire ouvre WhatsApp et ne stocke pas vos données sur ce
+              site.
+            </small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+      <div class="footer-main">
+        <a href="#accueil" class="logo footer-logo">
+          <img src="images/logo.png" alt="Logo JordaneElectronique" />
+          <span class="footer-brand">
+            Jordane<span class="rouge">Electronique</span>
+          </span>
+        </a>
+
+        <p>
+          Votre partenaire pour vos équipements agricoles, industriels et
+          électriques.
+        </p>
+
+        <div class="footer-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#categories">Catégories</a>
+          <a href="#produits">Produits</a>
+          <a href="#apropos">À propos</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> JordaneElectronique.</span>
+        <span>DNGR2046</span>
+      </div>
+    </footer>
+
+    <!-- BOUTON WHATSAPP FLOTTANT -->
+    <a
+      href="https://wa.me/237691952574"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contacter JordaneElectronique sur WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
